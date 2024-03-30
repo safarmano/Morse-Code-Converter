@@ -4,7 +4,7 @@ import pyperclip
 from data import messages, morse_code_dict
 
 
-# ---------------------------- CONSTANTS ------------------------------- #
+# -------------------------------------------------- CONSTANTS -------------------------------------------------- #
 
 WHITE = '#FFFFFF'
 BLACK = '#000000'
@@ -16,7 +16,7 @@ term_info_shown = False
 mark_info_shown = False
 
 
-# ---------------------------- ENCODING MECHANISM ------------------------------- #
+# -------------------------------------------------- ENCODING MECHANISM -------------------------------------------------- #
 
 def encode():
     encoding_result_entry.delete(0, 'end')
@@ -50,7 +50,7 @@ def encode():
     pyperclip.copy(encoded_word)
 
 
-# ---------------------------- DECODING MECHANISM ------------------------------- #
+# -------------------------------------------------- DECODING MECHANISM -------------------------------------------------- #
 
 def decode():
     decoding_result_entry.delete(0, 'end')
@@ -83,7 +83,7 @@ def decode():
         pyperclip.copy(decoded_word)
 
 
-# ---------------------------- CLEARING MECHANISM ------------------------------- #
+# -------------------------------------------------- CLEARING MECHANISM -------------------------------------------------- #
 
 def clear_encoding():
     encoding_entry.delete(0, 'end')
@@ -95,7 +95,7 @@ def clear_decoding():
     decoding_result_entry.delete(0, 'end')
 
 
-# ---------------------------- SAVING MECHANISM ------------------------------- #
+# -------------------------------------------------- SAVING MECHANISM -------------------------------------------------- #
 
 def save():
     word = encoding_entry.get()
@@ -123,7 +123,7 @@ def save():
                     data_file.write(f'[ {code} ] --> [ {decoding_result} ]\n')
 
 
-# ---------------------------- NIGHT MODE MECHANISM ------------------------------- #
+# -------------------------------------------------- NIGHT MODE MECHANISM -------------------------------------------------- #
 
 def select_night_mode():
     if night_mode.get():
@@ -166,7 +166,7 @@ def select_night_mode():
         clear_button_decoding.config(bg=GREY, fg=BLACK)
 
 
-# ---------------------------- UI SETUP ------------------------------- #
+# -------------------------------------------------- UI SETUP -------------------------------------------------- #
 
 # GENERAL PART
 
